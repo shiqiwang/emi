@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>emiwang-mainpage</title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="first-outermost-cell" ></div>
+    <a href="#">
+        <div class="circle-guides" id="first-circle"></div>
+    </a>
+    <a href="#">
+        <div class="circle-guides" id="second-circle"></div>
+    </a>
+    <a href="#">
+        <div class="circle-guides" id="third-circle"></div>
+    </a>
+
+<!--  -->
+    <script>
+
+        window.addEventListener('load', getHeight);
+        window.addEventListener('resize', getHeight);
+        function getHeight() {
+            var h = window.innerHeight;
+            var firstOutermostCell = document.getElementsByClassName("first-outermost-cell");
+            firstOutermostCell[0].style.height = h * 0.68 + 'px';
+        }
+
+        window.addEventListener('load', circleHeightWidth);
+        window.addEventListener('resize', circleHeightWidth);
+        function circleHeightWidth() {
+            var circleGuides = document.getElementsByClassName("circle-guides");
+            var w = circleGuides[0].clientWidth;
+            for (var i = 0; i < 3; i++)
+            {
+                circleGuides[i].style.height = w + "px";
+                circleGuides[i].style.marginLeft = 4* w / 3 + "px";
+            }
+
+            var h = window.innerHeight;
+            for(var i = 0; i < 3; i++)
+            {
+                circleGuides[i].style.marginTop = (h * 0.32 - w) / 2 + "px";
+            }
+        }
+
+    </script>
+</body>
+</html>

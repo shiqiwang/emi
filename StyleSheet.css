@@ -1,0 +1,39 @@
+﻿html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0px;
+    background-color: rgb(95, 162, 129);
+}
+
+.first-outermost-cell {
+    background: rgb(239, 240, 234) url(mainpage-mountain.png) center no-repeat;
+    background-size: 80%;
+}
+
+.circle-guides {
+    width: 12%;
+    background-color: rgb(246, 246, 234);
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
+}
+
+.circle-guides#first-circle {
+    background: rgb(246, 246, 234) url(about-me.png) center no-repeat;
+    background-size: 50%;
+}
+
+.circle-guides#second-circle {
+    background: rgb(246, 246, 234) url(guest-book.png) center no-repeat;
+    background-size: 50%;
+}
+
+.circle-guides#third-circle {
+    background: rgb(246, 246, 234) url(projects.png) center no-repeat;
+    background-size: 50%;
+}
+
